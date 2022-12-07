@@ -1,0 +1,586 @@
+/* Note: Styles are using mobile first approach logic */
+
+/* Styling applied to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root variables */
+:root {
+    --fs-xl: clamp(1rem, 3vw + 1rem, 5rem); /* for h1*/
+    --fs-l: clamp(0.75rem, 3vw + 1rem, 4rem); /*for h2 */
+    --fs-h3: clamp(0.35rem, 3vw + 1rem, 2.5rem); /* for h3 */
+    --fs-m: clamp(0.5rem, 3vw + .35rem, 1.45rem); /* for subheading*/
+    --fs-s: clamp(0.5rem, 3vw + .1rem, 1rem); /* for p */
+    --fs-xs: clamp(0.5rem, 3vw + 1rem, 1.125rem); /*for nav links*/
+}
+
+/* General styles on HTML tags */
+p {
+    margin: 0;
+    font-size: var(--fs-s);
+}
+
+h1 {
+    font-size: var(--fs-xl);
+}
+
+h2 {
+    font-size: var(--fs-l);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: 200;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* General styles on classes */
+.subheading {
+    font-size: var(--fs-m);
+    width: 100%;
+}
+
+.margin-10 {
+    margin: 0 10%; /* add 10% margin to left and right */
+}
+
+.align-center {
+    width: 100%; 
+    text-align: center;
+}
+
+.overlay {
+    /* create general overlay on top of images */
+    position: absolute; /*take element out of html flow */
+    z-index: 12; /* bring it to the front */
+}
+
+/* HOME PAGE CSS STYLES */
+
+/* Header styles*/
+
+    /* navbar styles */
+    .navigation {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list {
+        /* align the list horizontally to the center + take out additional left padding on ul tag */
+        display: flex;
+        justify-content: center;
+        padding: 2em 0;
+        margin-bottom: 0;
+    }
+
+    .nav-list li {
+        list-style: none;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: white;
+        padding: 0 1em;
+        font-size: var(--fs-xs);
+    }
+
+    /* h1 welcome text home page */
+    .intro-text {
+        color: white;
+        top: 30%;
+    }
+    
+    /* carousel image style */
+    .full-screen-img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /*keep aspect ratio but fill the page to the given dimensions 100vh,vw*/
+    }
+
+/* Header styles end */
+
+/* Destinations grid section styles */
+
+    /* Image grid */
+    .img-grid {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Individual image grid item components */
+    .stacked {
+        display: grid;
+    }
+
+    .stacked > * {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .card-img {
+        height: 33.3vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-content {
+        align-self: end;
+        color: white;
+        margin-left: 1em;
+        margin-bottom: .5em;
+        font-weight:600;
+    }
+
+    .card-title {
+        font-size: 18x;
+    }
+
+    /* Destinations title and list */
+    .destination-title {
+        padding: 2.5em 1em;
+    }
+
+    .show-desktop {
+        display: none; /* hide the second title and p tag */
+    }
+
+    .destination-list {
+        list-style: none;
+        padding: 1em 0;
+    }
+
+    .destination-item-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .destination-list-item {
+        padding: .5em .5em;
+    }
+
+    /* Destinations CTA button */
+    .destination-button {
+        margin-bottom: 4em;
+        border: none;
+        color: white;
+        background-color: #EC6234;
+        padding: .75em 2em;
+        border-radius: 9999px;
+        text-transform: uppercase;
+    }
+
+/* Destinations grid section styles end */
+
+
+/* "Get Local" section styles */
+    .local-section {
+        background-color: black;
+        color: white;
+    }
+
+    .local-content {
+        max-width: 50%;
+        margin: auto;
+        padding: 15% 0;
+    }
+
+    .local-text {
+        line-height: 1.8;
+        padding-top: 2rem;
+    }
+/* "Get Local" section styles end */
+
+
+/* Interests section styles */
+
+    /* Interests section container */
+    .interests-container {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Interests section background image */
+    .interests-bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.05;
+    }
+
+    /* Interests content container with h2 title and list inside */
+    .interests-content-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 10%;
+        margin: 0 auto;
+    }
+
+    .interests-title {
+        margin-bottom: 1.5em;
+        margin-block-start: 0;
+        line-height: 1.5;
+    }
+
+    /* Interests list */
+    .interests-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 2rem;
+        
+    }
+
+    /* Interests list items */
+    .interests-item {
+        width: 33.3%;
+        margin-bottom: 2rem;
+        padding: 1em 0;
+    }
+
+    .interests-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rounded-pill {
+        width: 6rem;
+        height: 9rem;
+        overflow: hidden;
+        border-radius: 9999px;
+    }
+
+    .interests-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .interests-content h3 {
+        margin-top: 1rem;
+    }
+
+    .interests-destinations {
+        display: none;
+        text-align: center;
+    }
+
+    /* Hover effects on interests list items */
+    .interests-item:hover {
+        color: white;
+    }
+
+    .eat:hover {
+        background-color: #606c38;
+    }
+
+    .journey:hover {
+        background-color: #bc6c25;
+    }
+
+    .learn:hover {
+        background-color: #b39c4d;
+    }
+
+    .unwind:hover {
+        background-color: #db7c26;
+    }
+
+    .connect:hover {
+        background-color: #656d4a;
+    }
+
+/* Interests section styles end */
+
+
+/* Footer section styles */
+    .footer-section {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 8% 0;
+    }
+
+    .fa-social-icons {
+        font-size: 30px;
+        padding: 0 1em;
+    }
+
+    .social-icons {
+        margin-bottom: 3rem;
+    }
+
+    .footer-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .footer-list-items {
+        padding-bottom: 1rem;
+    }
+
+    .footer-links {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer-privacy {
+        margin-top: 3rem;
+    }
+
+    .footer-info {
+        margin-bottom: 0;
+    }
+
+/* Footer section styles end */
+
+
+/* Media queries */
+
+    /* change styles when width is more than 768px */
+    @media (min-width: 768px) {
+
+        /* Header h1 welcome text */
+        .intro-text {
+            top: 40%;
+        }
+
+        /* Navbar */
+        .nav-list {
+            justify-content: flex-end; /*change the position of the navbar on desktop to be on the right side*/
+            margin-right: 10%;
+        }
+
+        /* Destinations container */
+        .destinations-wrapper {
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Destinations image grid */
+        .img-grid {
+            max-width: 70%;
+            float: right;
+        }
+
+        /* Destinations first title and paragraph */
+        .show-mobile {
+            display: none;
+        }
+
+        /* Destinations second title and paragraph */
+        .show-desktop {
+            display: block;
+        }
+
+        /* Destinations text, list and button content container */
+        .destination-flex-column {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Destinations list of continents container */
+        .destination-item-wrapper {
+            justify-content: space-between;
+        }
+
+        /* Interests item */
+        .interests-item {
+            flex: 1 1 0%;
+            width: auto;
+        }
+    
+        /* Interests item image container */
+        .rounded-pill {
+            width: 150px;
+            height: 326px;
+        }
+    }
+
+    /* change styles when width is more than 990px */
+    @media (min-width: 990px) {
+        /* Destinations image grid */
+        .img-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+       /* Individual image part of the destinations grid */
+        .card-img {
+            width: 100%;
+            height: 50vh;
+            aspect-ratio: 1 / 1;
+        }
+
+        /* Destinations first title and paragraph */
+        .show-mobile {
+            display: none;
+        }
+
+        /* Interests section list of destinations */
+        .interests-destinations {
+            display: block;
+            list-style: none;
+            padding-left: 0;
+        }
+    }
+
+    /* change styles when width is more than 1280px */
+    @media (min-width: 1280px) {
+        /* Interests item image container */
+        .rounded-pill {
+           width: 252px;
+           height: 421px;
+           overflow: hidden;
+        }
+    }
+
+/* Media queries end */
+/* HOME PAGE CSS STYLES END*/
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* CONTACT PAGE ADDITIONAL CSS */
+
+/* Header styles*/
+    /* Contact page welcoming title styles */
+    .backdrops {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: auto;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+
+    .backdrops h1 {
+        font-size: var(--fs-l);
+        color: white;
+    }
+/* Header styles end*/
+
+/* Contact information Section styles */
+    .contact-item {
+        width: 100%;
+    }
+
+    .contact-item-text {
+        padding: 10%;
+    }
+
+    .contact-item-text h2 {
+        padding-bottom: .5em;
+        font-size: var(--fs-l);
+    }
+
+    .contact-details {
+        padding-top: 1.5em;
+        font-size: var(--fs-xs);
+    }
+
+    .meet-us {
+        background-color: #1a1919;
+        color: white;
+    }
+
+    .map-responsive{
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+
+    .map-responsive iframe{
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+/* Contact information Section styles end */
+
+/* Newsletter sign up section styles */
+    .newsletter {
+        text-align: center;
+        color: white;
+        background-color: #363333;
+        padding: 6em;
+    }
+
+    .newsletter h2 {
+        margin-bottom: 1.5em;
+    }
+
+    /* Newsletter preference question */
+    .input-prompt {
+        font-size: var(--fs-m);
+    }
+
+    .signup-flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletter-choice {
+        padding: .5em;
+        font-size: var(--fs-xs);
+    }
+
+    /* Newsletter email input and submit button */
+    .newsletter-input {
+        margin-top: 2em;
+    }
+
+    .email-input {
+        border: none;
+        text-decoration: none;
+        color: rgb(78, 73, 73);
+        padding: .75em 2em;
+        border-radius: 9999px;
+    }
+
+    .newsletter-button {
+        border: none;
+        text-decoration: none;
+        color: white;
+        background-color: #18b94d;
+        padding: .75em 2em;
+        border-radius: 9999px;
+        text-transform: uppercase;
+    }
+
+/* Newsletter sign up section styles end */
+
+/* Media queries for contact page*/
+
+/* change styles when width is more than 990px */
+@media (min-width: 990px) {
+    /* Contact information section */
+    .contact-flex {
+        display: flex;
+    }
+
+    .contact-item {
+        width: 50%;
+    }
+}
+
+/* Media queries end */
+
+/* CONTACT PAGE ADDITIONAL CSS END */
