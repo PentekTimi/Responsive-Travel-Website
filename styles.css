@@ -41,7 +41,11 @@ img {
     display: block;
 }
 
-/* General styles on classes */
+q {
+    quotes: none;
+}
+
+/* General styles on classes that are added to multiple tags*/
 .subheading {
     font-size: var(--fs-m);
     width: 100%;
@@ -140,7 +144,7 @@ img {
     }
 
     .card-title {
-        font-size: 18x;
+        font-size: 18px;
     }
 
     /* Destinations title and list */
@@ -170,11 +174,15 @@ img {
     .destination-button {
         margin-bottom: 4em;
         border: none;
-        color: white;
         background-color: #EC6234;
         padding: .75em 2em;
         border-radius: 9999px;
         text-transform: uppercase;
+        color: white;
+    }
+
+    .destination-button:hover {
+        background-color: #18b94d;
     }
 
 /* Destinations grid section styles end */
@@ -323,6 +331,11 @@ img {
 
     .social-icons {
         margin-bottom: 3rem;
+    }
+
+    .social-links {
+        text-decoration: none;
+        color: white;
     }
 
     .footer-list {
@@ -476,6 +489,7 @@ img {
 /* Header styles end*/
 
 /* Contact information Section styles */
+    /* Contact details style */
     .contact-item {
         width: 100%;
     }
@@ -499,11 +513,12 @@ img {
         color: white;
     }
 
+    /* Map styles */
     .map-responsive{
         overflow: hidden;
         padding-bottom: 56.25%;
         position: relative;
-        height: 0;
+        height: 100%;
     }
 
     .map-responsive iframe{
@@ -565,6 +580,10 @@ img {
         text-transform: uppercase;
     }
 
+    .newsletter-button:hover {
+        background-color: #EC6234;;
+    }
+
 /* Newsletter sign up section styles end */
 
 /* Media queries for contact page*/
@@ -584,3 +603,122 @@ img {
 /* Media queries end */
 
 /* CONTACT PAGE ADDITIONAL CSS END */
+
+/* DESTINATIONS PAGE ADDITIONAL CSS */
+
+    /* Destinations Header style */
+    /* Destinations page background image */
+    .destinations-intro-screen {
+        height: 80vh;
+        width: 100%;
+    }
+
+    .destinations-bg-img {
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Destination welcome text */
+    .destinations-intro-screen .intro-text {
+        top: 35%;
+    }
+
+    .destinations-quote {
+        padding: 0 10%;
+    }
+
+    .destinations-quote h1 {
+        font-size: var(--fs-h3);
+
+    }
+    /* Destinations Header style end */
+    
+    /* Destination cards section */
+    .destination-cards-container {
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .destination-cards-container h2 {
+        margin-top: 3rem;
+    }
+
+    .destination-cards-container p {
+        margin-bottom: 3rem;
+    }
+
+    .destination-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+    }
+
+    .destination-card {
+        height: 35vh;
+        width: auto;
+        margin: 1rem 3.5%;
+    }
+    
+    .destination-card-img-container {
+        height: 90%;
+        width: 100%;
+    }
+    
+    .destination-card-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .destination-card-text {
+        margin-top: 0.5rem;
+        font-size: var(--fs-xs);
+    }
+    /* Destination cards section end */
+    
+    /* Top destinations table section */
+    .top-destinations-section {
+        padding: 5% 10%;
+        margin: 40px auto 0;
+    }
+
+    .top-destinations-section h2 {
+        margin-bottom: 4rem;
+    }
+
+    .top-destinations-table {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    th, td {
+        padding: 1rem 1.5rem;
+        text-align: left;
+    }
+
+    thead tr {
+        background-color: #1a1919;
+        color: white;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #1a1919;
+    }
+
+    .table-source {
+        padding-top: 1rem;
+    }
+
+    /* Top destinations table section end*/
+    
+    /* DESTINATIONS PAGE ADDITIONAL CSS END */

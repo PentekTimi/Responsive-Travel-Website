@@ -1,5 +1,10 @@
 Responsive Travel themed Website
 
+Why  did I build this website?
+The reason why I decided to build this website is because one of my passions is travelling. I visited places such as USA, Canada
+many European countries, and soon Africa. The decision was also enforced by the fact that such a website could be looked at as 
+a real business landing page and as part of my portfolio that could be of advantage at an interview.
+
 Image credits and sources:
 Photo by <a href="https://unsplash.com/@thesologirlstravelguide?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexa West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 Photo by <a href="https://unsplash.com/@arthurbrognoli?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arthur Brognoli</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
